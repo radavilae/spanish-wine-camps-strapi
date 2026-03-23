@@ -90,4 +90,4 @@ temp/
 
 # Strapi specific
 .cache/
-public/uploads/
+# public/uploads/  <-- Comentamos esta línea para permitir uploads
