@@ -1,0 +1,75 @@
+{
+  "kind": "collectionType",
+  "collectionName": "journeys",
+  "info": {
+    "singularName": "journey",
+    "pluralName": "journeys",
+    "displayName": "Journey",
+    "description": "Wine camp journeys"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "sectionId": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "date": {
+      "type": "date",
+      "required": false
+    },
+    "dateText": {
+      "type": "string",
+      "default": "Coming Soon"
+    },
+    "price": {
+      "type": "decimal",
+      "required": false
+    },
+    "priceCurrency": {
+      "type": "string",
+      "default": "EUR"
+    },
+    "maxParticipants": {
+      "type": "integer",
+      "default": 12
+    },
+    "currentParticipants": {
+      "type": "integer",
+      "default": 0
+    },
+    "guests": {
+      "type": "component",
+      "component": "journey.guest",
+      "repeatable": true
+    },
+    "includedItems": {
+      "type": "component",
+      "component": "journey.included-item",
+      "repeatable": true
+    },
+    "order": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}

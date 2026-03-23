@@ -1,0 +1,28 @@
+{
+  "kind": "singleType",
+  "collectionName": "camp_configs",
+  "info": {
+    "singularName": "camp-config",
+    "pluralName": "camp-configs",
+    "displayName": "Camp Config",
+    "description": "Global camp configuration"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "launchDateOffsetDays": {
+      "type": "integer",
+      "default": 8
+    },
+    "defaultMaxParticipants": {
+      "type": "integer",
+      "default": 12
+    },
+    "defaultCurrentParticipants": {
+      "type": "integer",
+      "default": 8
+    }
+  }
+}

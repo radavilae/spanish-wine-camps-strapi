@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_journey_guests",
+  "info": {
+    "displayName": "Guest",
+    "description": "Guest information for journeys"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    }
+  }
+}
