@@ -1,18 +1,14 @@
 module.exports = [
   'strapi::errors',
-  'strapi::security', // Mantener seguridad por defecto
   {
     name: 'strapi::cors',
     config: {
       enabled: true,
       headers: '*',
-      origin: [
-        'https://spanish-wine-camps-frontend.vercel.app', 
-        'http://localhost:5173', 
-        'http://localhost:3000'
-      ]
+      origin: ['*']
     },
   },
+  'strapi::security', // Mantener seguridad por defecto
   'strapi::poweredBy',
   'strapi::logger',
   'strapi::query',
