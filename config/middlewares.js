@@ -5,17 +5,12 @@ module.exports = [
     name: 'strapi::cors',
     config: {
       enabled: true,
+      headers: '*',
       origin: [
-        'https://spanish-wine-camps-frontend.vercel.app',
-        'https://spanish-wine-camps-frontend-web.vercel.app',
-        'http://localhost:5173',
-        'http://localhost:3000',
-        'http://localhost:5174'
-      ],
-      methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'HEAD', 'OPTIONS'],
-      headers: ['Content-Type', 'Authorization', 'Origin', 'Accept', 'X-Requested-With'],
-      credentials: true,
-      keepHeaderOnError: true,
+        'https://spanish-wine-camps-frontend.vercel.app', 
+        'http://localhost:5173', 
+        'http://localhost:3000'
+      ]
     },
   },
   'strapi::poweredBy',
