@@ -1,37 +1,18 @@
 module.exports = [
-  'strapi::logger',
   'strapi::errors',
+  'strapi::security', // Mantener seguridad por defecto
   {
-    name: 'strapi::security',
+    name: 'strapi::cors',
     config: {
-      contentSecurityPolicy: {
-        useDefaults: true,
-        directives: {
-          'connect-src': ["'self'", 'https:'],
-          'img-src': [
-            "'self'",
-            'data:',
-            'blob:',
-            'https://spanish-wine-camps-strapi.onrender.com',
-          ],
-          'media-src': [
-            "'self'",
-            'data:',
-            'blob:',
-            'https://spanish-wine-camps-strapi.onrender.com',
-          ],
-          upgradeInsecureRequests: null,
-        },
-      },
-      cors: {
-        enabled: true,
-        origin: ['https://spanish-wine-camps-frontend.vercel.app', 'http://localhost:5173', 'http://localhost:3000', 'https://spanish-wine-camps-frontend-web.vercel.app'],
-        methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-        credentials: true,
-      },
+      enabled: true,
+      origin: ['https://spanish-wine-camps-frontend.vercel.app', 'http://localhost:5173'],
+      methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'HEAD', 'OPTIONS'],
+      headers: ['Content-Type', 'Authorization', 'Origin', 'Accept'],
+      keepHeaderOnError: true,
     },
   },
   'strapi::poweredBy',
+  'strapi::logger',
   'strapi::query',
   'strapi::body',
   'strapi::session',
